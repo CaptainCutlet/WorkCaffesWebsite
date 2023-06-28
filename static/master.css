@@ -1,0 +1,112 @@
+body {
+  background-color: #8D7B68;
+  color: white;
+  background-repeat: repeat-x;
+  background-image: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80")
+}
+
+h3 {
+  color: red;
+}
+
+table {
+
+}
+
+thead {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  color: #1B2430;
+}
+
+tbody {
+  letter-spacing: 0.2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1B2430;
+}
+
+.table-wrapper {
+  padding: 3%;
+  background-color: #8D7B68;
+  margin: 15% 10% 3% 10%;
+  border-radius: 75px;
+}
+
+
+/* Button to add new caffe */
+
+.add-caffe-button {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 75px;
+  background-color: #1B2430;
+  border-color: #8D7B68;
+  color: #8D7B68;
+  width: 80%;
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+  font-weight: 600;
+  margin: 0 10% 0 10%;
+}
+
+.add-caffe-button:hover {
+  background-color: #8D7B68;
+  border-color: #1B2430;
+  color: #1B2430;
+}
+
+/* Style for flashed messages */
+
+.error-msg {
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: red;
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+  font-weight: 500;
+  color: red;
+  padding: 2%;
+  margin: 2% 0;
+  display: inline-block;
+}
+
+/* Styles for Login and Signup screens */
+
+.deafault-form-scr {
+  background-color: #C8B6A6;
+  padding: 3%;
+  border-radius: 75px;
+  color: black;
+  margin: 5% 10%;
+  font-size: 2.5rem;
+}
+
+.change-scr-btn {
+  background-color: white;
+  color: black;
+  width: 20%;
+  padding: 1% 2%;
+  border-radius: 75px;
+  border-color: black;
+  border-width: 2px;
+  transition: background-color 2s linear;
+  transition: color 0.1s linear;
+  transition: border-color 0.1s linear;
+}
+
+.change-scr-btn:hover {
+  text-decoration: none;
+  background-color: #8D7B68;
+  color: white;
+  border-color: #8D7B68;
+  width: 20%;
+  padding: 1% 2%;
+  border-radius: 75px;
+}
+
+.change-scr-wrapper {
+  margin: 5% 0;
+}

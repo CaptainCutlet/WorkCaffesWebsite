@@ -1,0 +1,25 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "bootstrap/base.html" %}
+{% include "navbar.html" %}
+
+{% block title %} Add a new caffe {% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('.static', filename='master.css') }}">
+    <link rel="stylesheet" href="{{ url_for('.static', filename='bootstrap_override.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="deafault-form-scr">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="error-msg">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {{ wtf.quick_form(cafe_form) }}
+    </div>
+{% endblock %}

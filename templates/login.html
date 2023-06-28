@@ -1,0 +1,33 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('.static', filename='master.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="deafault-form-scr">
+      {% with messages = get_flashed_messages() %}
+          {% if messages %}
+              {% for msg in messages %}
+                  <div class="error-msg">{{ message }}</div>
+              {% endfor %}
+          {% endif %}
+      {% endwith %}
+
+      {{ wtf.quick_form(form) }}
+
+      <div class="change-scr-wrapper">
+        <a class="change-scr-btn" href="{{ url_for('register') }}">
+          Create an account
+        </a>
+      </div>
+    </div>
+
+{% endblock %}

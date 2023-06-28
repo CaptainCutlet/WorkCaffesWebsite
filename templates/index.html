@@ -1,0 +1,43 @@
+{% extends 'bootstrap/base.html' %}
+{% include "navbar.html" %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('.static', filename='bootstrap_override.css') }}">
+<link rel="stylesheet" href="{{ url_for('.static', filename='master.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="table-wrapper">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">WiFi</th>
+        <th scope="col">Chargers</th>
+        <th scope="col">Work environment</th>
+        <th scope="col">Price</th>
+        <th scope="col">Service/Food</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for caffe in cafes %}
+      <tr>
+        <td>{{ caffe.caffe }}</td>
+        <td>{{ caffe.wifi }}</td>
+        <td>{{ caffe.chargers }}</td>
+        <td>{{ caffe.env }}</td>
+        <td>{{ caffe.price }}</td>
+        <td>{{ caffe.serv_food }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<!--TODO: add more fluent transition between pages-->
+
+<a class="btn add-caffe-button" href="{{ url_for('add_cafe') }}">Add Caffe</a>
+
+{% endblock %}
